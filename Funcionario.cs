@@ -12,6 +12,16 @@ namespace ExerciciosPoo
         public string? Cargo { get; set; }
         public decimal Salario { get; private set; }
 
+        // Construtor para definir o salário inicial (dentro da classe o set privado é permitido)
+        
+
+        public Funcionario(string nome, string cargo, decimal salarioInicial)
+        {
+            Nome = nome;
+            Cargo = cargo;
+            Salario = salarioInicial;
+        }
+
         public void AumentarSalario(decimal percentual)
         {
             if (percentual > 0)
